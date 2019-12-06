@@ -183,12 +183,9 @@ export default {
         },
         deleteGoods(index,id) { //移除购物车
             deleteShopCart(id).then((response)=> {
-                console.log(response.data);
-                this.goods_list.splice(index,1);
-
+                this.goods_list.goods_list.splice(index,1);
                 // 更新store数据
                 this.$store.dispatch('setShopList');
-
             }).catch(function (error) {
                 console.log(error);
             });

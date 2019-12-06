@@ -149,6 +149,7 @@ import { getGoodsDetail, getFav, addFav, delFav, addShopCart,getShopCart } from 
     created () {
         this.productId = this.$route.params.productId;
         var productId = this.productId
+        // console.log(cookie.getCookie('token'))
         if(cookie.getCookie('token')){
           getFav(productId).then((response)=> {
             this.hasFav = true
@@ -167,7 +168,7 @@ import { getGoodsDetail, getFav, addFav, delFav, addShopCart,getShopCart } from 
         getDetails () { //  请求商品详情
           getGoodsDetail(this.productId)
             .then((response)=> {
-                console.log(response.data);
+                // console.log(response.data);
                 this.proDetail = response.data;
                 this.curShow = this.proDetail.images[0];
             }).catch(function (error) {
@@ -222,7 +223,7 @@ import { getGoodsDetail, getFav, addFav, delFav, addShopCart,getShopCart } from 
           }).then((response)=> {
                 console.log(response.data);
                 this.hasFav = true
-                alert('已成功加入收藏夹');
+                // alert('已成功加入收藏夹');
             }).catch(function (error) {
                 console.log(error);
             });

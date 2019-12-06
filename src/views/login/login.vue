@@ -122,6 +122,7 @@
       //清除缓存
       cookie.delCookie('token');
       cookie.delCookie('name');
+      console.log('清除cookie');
       //重新触发store
       //更新store数据
       this.$store.dispatch('setInfo');
