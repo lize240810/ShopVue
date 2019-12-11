@@ -248,7 +248,7 @@
               }
             ).then((response)=> {
               alert('订单创建成功')
-              window.location.href=response.data.alipay_url;
+              // window.location.href=response.data.alipay_url;
             }).catch(function (error) {
               console.log(error);
             });

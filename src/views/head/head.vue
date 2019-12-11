@@ -79,11 +79,12 @@
                                       <div v-for="list in item.sub_cat">
                                         <dl>
                                           <dt>
-                                            <router-link :to="'/app/home/list/'+list.id">{{list.name}}</router-link>
+                                            <router-link :to="'/app/home/list/'+list.id">
+                                            {{list.name}}</router-link>
                                           </dt>
 
                                           <dd>
-                                            <router-link  v-for="childrenList in list.sub_cat" :key="childrenList.id" :to="'/app/home/list/'+childrenList.id">{{childrenList.name}}</router-link>
+                                            <router-link  v-for="childrenList in list.sub_cat" :key="childrenList.id" :to="'/app/home/list/'+childrenList.id" >{{childrenList.name}}</router-link>
                                           </dd>
                                         </dl>
                                         <div class="clear"></div>
