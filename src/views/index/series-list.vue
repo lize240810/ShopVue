@@ -7,11 +7,11 @@
                     <h2>{{items.name}}</h2>
                 </div>
                 <ul class="brand">
-
-                    <li v-for="brand in items.brands">
+                    <li v-for="(brand, index) in items.brands" v-if="index<3">
                        <router-link :to="'/app/home/list/'+brand.id" >
                        <a :title="brand.name" target="_blank">
-                            <img :src="brand.image" :alt="brand.name" style="display: inline;">
+
+                            <img :src="brand.image" :alt="brand.name" style="display: inline;"">
                         </a>
                         </router-link>
                     </li>
